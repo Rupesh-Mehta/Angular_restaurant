@@ -1,0 +1,12 @@
+<div class="cart" [style.backgroundColor]="'#ff4757'">
+  🛒 Cart: {{ cartCount }} Items
+</div>
+<div class="dish-container">
+    <div *ngFor="let dish of filterData" class="dish-card">
+      <img [src]="dish.img" alt="Card dish-card" class="dish-image" />
+      <h3>{{ dish.name }}</h3>
+      <p>{{ dish.description }}</p>
+      <p><strong>Price:</strong> ₹{{ dish.price }}</p>
+      <p><strong>Rating:</strong> {{ dish.rating }}</p>
+    </div>
+  </div>

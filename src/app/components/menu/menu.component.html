@@ -1,0 +1,18 @@
+<div class="menu-container">
+    <h2>Select Category</h2>    
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown">
+        <select [(ngModel)]="selectedCategory" (change)="onCategoryChange(selectedCategory)">
+            <option value="" disabled selected>Select a category</option>
+            <!-- <option *ngFor="let category of categories" [value]="category">{{ category }}</option> -->
+            <option value="/starter">Starter</option>
+            <option value="/maincourse">Main Course</option>
+            <option value="/dessert">Dessert</option>
+        </select>
+        <app-starter *ngIf="selectedCategory === 'starter'" [category]="selectedCategory"></app-starter>
+        <!-- <app-maincourse *ngIf="selectedCategory === 'starter'" [category]="selectedCategory"></app-maincourse>
+        <app-dessert *ngIf="selectedCategory === 'starter'" [category]="selectedCategory"></app-dessert> -->
+    </div>
+</div>
+
